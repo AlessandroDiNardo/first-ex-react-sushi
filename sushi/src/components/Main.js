@@ -51,17 +51,24 @@ class Main extends Component {
         ]
     }
 
+    cardDelete = cardId => {
+        const cards = this.state.cards.filter(card => card.id != cardId);
+        this.setState({ cards });
+    }
+
     render() {
         return (
             <>
-                <div className='container-fluid bg-warning py-5'>
+                <div className='container-fluid py-5'>
                     <h3 className='text-center fw-bold fs-2'> Lista dei piatti </h3 >
                     <div className='container px-5 py-5' >
                         <div className='d-flex justify-content-center align-items-center flex-wrap gap-5' >
                             {
                                 this.state.cards.map(card => (
                                     <Cards
+                                        key={card.id}
                                         card={card}
+                                        onDelete={this.cardDelete}
                                     />
                                 ))
                             }

@@ -10,7 +10,7 @@ class Cards extends Component {
                     <p className="card-text">&euro;{this.props.card.Price} </p>
                     <div className='d-flex justify-content-center align-items-center gap-2'>
                         <button className="btn btn-success fw-bold">Add</button>
-                        <button className="btn btn-danger fw-bold">Delete</button>
+                        <button className="btn btn-danger fw-bold" onClick={() => this.props.onDelete(this.props.card.id)}>Delete</button>
                     </div>
                 </div>
             </div>
