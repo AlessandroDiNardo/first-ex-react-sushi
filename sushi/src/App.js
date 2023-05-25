@@ -1,14 +1,17 @@
+import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 
 
-function App() {
-  return (
-    <>
-      < Navbar />
-      < Main />
-    </>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        < Navbar />
+        < Main />
+      </>
+    );
+  }
 }
 
 export default App;

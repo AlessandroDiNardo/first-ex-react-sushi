@@ -1,18 +1,21 @@
-import California from '../images/california.png';
+import React, { Component } from 'react';
 
-function Cards() {
-    return (
-        <div classNameName="col">
+class Cards extends Component {
+    render() {
+        return (
             <div className="card" style={{ width: "18rem", textAlign: 'center' }}>
-                <img src={California} className="card-img-top" alt="..." />
+                <img src={this.props.Img} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">California Rolls</h5>
-                    <p className="card-text">5.00 &euro;</p>
-                    <button className="btn btn-danger">Delete</button>
+                    <h5 className="card-title">{this.props.Name} Roll</h5>
+                    <p className="card-text">&euro;{this.props.Price} </p>
+                    <div className='d-flex justify-content-center align-items-center gap-2'>
+                        <button className="btn btn-success fw-bold">Add</button>
+                        <button className="btn btn-danger fw-bold">Delete</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Cards;
