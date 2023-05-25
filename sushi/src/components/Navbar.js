@@ -2,7 +2,7 @@ function Navbar() {
     return (
         < nav className="navbar bg-secondary" >
             <div className="container-fluid">
-                <span className="navbar-brand mb-0 h1">Navbar</span>
+                <h1 className="navbar-brand text-center fw-bold fs-2">Navbar</h1>
             </div>
         </nav >
     );
